@@ -479,7 +479,8 @@ class ShowOff < Sinatra::Application
     @title = ShowOffUtils.showoff_title
     what = params[:captures].first
     what = 'index' if "" == what
-    @asset_path = (env['SCRIPT_NAME'] || '').gsub(/\/?$/, '/').gsub(/^\//, '')
+
+    #@asset_path = (env['SCRIPT_NAME'] || '').gsub(/\/?$/, '/').gsub(/^\//, '')
     if (what != "favicon.ico")
       data = send(what)
       if data.is_a?(File)
