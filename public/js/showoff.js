@@ -182,6 +182,7 @@ function showSlide(back_step) {
 	}
 
 	currentSlide = slides.eq(slidenum)
+  setTimeout(function () { centerSlide(currentSlide); }, 100);
 
 	var transition = currentSlide.attr('data-transition')
 	var fullPage = currentSlide.find(".content").is('.full-page');
